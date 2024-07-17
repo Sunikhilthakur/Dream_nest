@@ -19,7 +19,7 @@ const ListingDetails = () => {
   const getListingDetails = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3001/properties/${listingId}`,
+        `https://dream-nest-n68v.onrender.com/properties/${listingId}`,
         {
           method: "GET",
         }

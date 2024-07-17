@@ -1,5 +1,3 @@
-
-
 import { useState } from "react";
 import "../styles/ListingCard.scss";
 import {
@@ -56,7 +54,7 @@ const ListingCard = ({
     
     try {
       const response = await fetch(
-        `http://localhost:3001/users/${user?._id}/wishlist/${listingId}`,
+        `https://dream-nest-n68v.onrender.com/users/${user?._id}/wishlist/${listingId}`,
         {
           method: "PATCH",
           headers: {
@@ -95,7 +93,7 @@ const ListingCard = ({
           {listingPhotoPaths?.map((photo, index) => (
             <div key={index} className="slide">
               <img
-                src={`http://localhost:3001/${photo?.replace("public", "")}`}
+                src={`https://dream-nest-n68v.onrender.com/${photo?.replace("public", "")}`}
                 alt={`photo ${index + 1}`}
               />
               <div

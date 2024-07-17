@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
+
+// Listings.jsx
+import React, { useEffect, useState } from "react";
 import { categories } from "../data";
 import "../styles/Listings.scss";
-import ListingCard from "./ListingCard";
+import ListingCard from "./ListingCard"; // Importing the component
 import Loader from "./Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { setListings } from "../redux/state";
@@ -9,7 +11,6 @@ import { setListings } from "../redux/state";
 const Listings = () => {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
-
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const listings = useSelector((state) => state.listings);
@@ -67,9 +68,10 @@ const Listings = () => {
               category,
               type,
               price,
-              booking=false
+              booking = false,
             }) => (
               <ListingCard
+                key={_id} // Ensure unique key for each child
                 listingId={_id}
                 creator={creator}
                 listingPhotoPaths={listingPhotoPaths}

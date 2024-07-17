@@ -5,13 +5,15 @@
   cursor: pointer;
   padding: 10px;
   border-radius: 10px;
+  width: 300px; // Ensure a fixed width for consistent alignment
+  box-sizing: border-box; // Include padding and border in the element's total width and height
 
   &:hover {
     @include shadow;
   }
 
   .slider-container {
-    width: 300px;
+    width: 100%;
     overflow: hidden;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -67,10 +69,12 @@
 
   h3 {
     font-size: 18px;
+    text-align: center; // Center align the text
   }
 
   p {
     font-size: 16px;
+    text-align: center; // Center align the text
   }
 
   span {
@@ -89,3 +93,4 @@
     background: none;
   }
 }
+

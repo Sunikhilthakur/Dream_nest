@@ -13,7 +13,9 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "3.1.4"
+  },
   "scripts": {
     "start": "nodemon index.js"
   },
